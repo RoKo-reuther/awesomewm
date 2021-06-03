@@ -1,0 +1,168 @@
+/**
+ * Copyright: Bobby_K
+*/
+
+configuration {
+	modi:			"drun,window";
+	display-drun:	"Programme";
+	display-window:	"geöffnete Fenster";
+	show-icons:		true;
+	sidebar-mode:	true;
+}
+
+@import "globals.rasi"
+
+window {
+	location:			westsouth;
+	height:				1170; /*calc: screen size - wibar */
+	width:				20%;
+	children:			[firstline, mainbox];
+	background-color:	@bgnormal;
+}
+
+
+	firstline {
+		orientation:		horizontal;
+		expand:				false;
+		children:			[ freespace, inputbox, freespace];
+		background-color:	transparent;
+	}
+	
+		inputbox {
+		orientation:		horizontal;
+		expand:				false;
+		width:				19%;
+		margin: 			1em 1em 1.5em 1em;
+		border:  			0.25em;
+		border-radius: 		1.2em;
+		children: 			[ textbox, inputbar ];
+		border-color: 		@fgurgent;
+		background-color: 	@promptbg;
+	}
+	
+			textbox {                                                                                             
+			 expand: 			false;                                                   
+			 margin: 			0.15em 0.3em 0.15em 0.3em;
+			 vertical-align: 	0.5;                                       
+			 str: 				"⸎";
+			 font:            	@fontbigger;
+			 text-color: 		@promptcol;
+			 background-color:	transparent;
+		}
+
+			inputbar {
+				expand:				true;
+				margin:				0.15em 0.3em 0.15em 0em;
+				children:			[ entry ];
+				background-color: 	transparent;
+			}
+			
+				entry {
+					padding:        	0.15em;
+					font:           	@fontbigger;
+					text-color:     	@promptcol;
+                    vertical-align: 0.5;  
+					background-color: 	transparent;
+				}
+
+		freespace {
+			expand:	true;
+			background-color:	transparent;
+		}
+
+
+	mainbox {
+		orientation:		vertical;
+		children: 			[ listview, sidebar ];
+		background-color:	transparent;
+	}
+
+		listview {
+			spacing: 			0em;
+			cycle:   			true;
+			background-color:	transparent;
+		}
+		
+		sidebar {
+			margin: 			0.5em 0em 0em 0em;
+			background-color:	transparent;
+		}
+
+	
+
+button {
+	border:				0 0 5 0px solid;
+    padding:			7px 2px;
+    background-color:	transparent;
+    text-color:			@fgnormal;
+}
+
+	button selected {
+		border-color:		@bordercol;
+	}
+
+
+	
+element {
+	padding: 			18px;
+	border:  			0 0 0 5px solid;
+	background-color:	transparent;
+}
+
+element-text {
+    vertical-align: 	0.5;  
+}
+
+element-icon {
+    size: 2%;
+    vertical-align: 	1;  
+}
+
+element selected {
+	border-color:		@bordercol;
+}
+
+element normal.normal {
+	background-color: @normal-background;
+	text-color:       @normal-foreground;
+}
+
+element normal.urgent {
+	background-color: @urgent-background;
+	text-color:       @urgent-foreground;
+}
+
+element normal.active {
+	background-color: @active-background;
+	text-color:       @active-foreground;
+}
+
+element selected.normal {
+	background-color: @selected-normal-background;
+	text-color:       @selected-normal-foreground;
+}
+
+element selected.urgent {
+	background-color: @selected-urgent-background;
+	text-color:       @selected-urgent-foreground;
+}
+
+element selected.active {
+	background-color: @selected-active-background;
+	text-color:       @selected-active-foreground;
+}
+
+element alternate.normal {
+	background-color: @normal-background;
+	text-color:       @normal-foreground;
+}
+
+element alternate.urgent {
+	background-color: @urgent-background;
+	text-color:       @urgent-foreground;
+}
+
+element alternate.active {
+	background-color: @active-background;
+	text-color:       @active-foreground;
+}
