@@ -1,0 +1,35 @@
+* {
+	fgnormal:	rgb(238,233,233);
+	fgfocus:	rgb(57,146,175);
+	fgurgent:	rgb(165,81,79);
+	
+	bgnormal:	rgb(40,44,52,0.87);
+	bgfocus:	rgb(29,31,33,0.4);
+	bgurgent:	rgb(40,44,52);
+	
+	bordercol:	@fgfocus;	/*für Selektivitätsanzeige*/
+	promptcol:	@fgfocus;
+	promptbg:	rgb(40,44,52,0.5);	/* Abstufung von bgnormal*/
+	
+
+	selected-normal-foreground:  @fgfocus;
+	normal-foreground:           @fgnormal;
+	selected-normal-background:  @bgfocus;
+	normal-background:           transparent;
+
+	selected-urgent-foreground:  @fgurgent;
+	urgent-foreground:           @fgurgent;
+	selected-urgent-background:  @bgfocus;
+	urgent-background:           @bgurgent;
+
+	selected-active-foreground:  @fgfocus;
+	active-foreground:           @fgurgent;
+	selected-active-background:  @bgfocus;
+	active-background:           transparent;
+
+
+
+	font:			  "Roboto regular 11.5";
+	fontmedium:		"Roboto medium 11.5";
+	fontbigger:		"Roboto medium 13";
+}

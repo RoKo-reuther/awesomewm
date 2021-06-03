@@ -1,0 +1,19 @@
+/**
+ * Copyright: Bobby_K
+ */
+
+
+/**
+ * Hier werden nur Änderungen zum coronis_sidebar thema angegeben.
+ */
+@import "main.rasi"
+
+window {
+	width:				100%;
+	children:			[ firstline, freespace ];
+	background-color:	transparent;
+}
+
+inputbox {
+	background-color: 	@promptbg;
+}

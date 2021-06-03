@@ -1,0 +1,9 @@
+compton
+rofi
+conky
+xprop
+xdotool
+mlocate
+fontawesome-fonts
+google-noto-sans-fonts
+brightnessctl
